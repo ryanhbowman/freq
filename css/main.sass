@@ -12,20 +12,26 @@ body
   font-family: proxima-nova, sans-serif
   letter-spacing: .5px
   overflow-x: hidden
-  
+  background: url('../images/map.jpg') 
+  background-size: cover
+  background-position: 50% 50%
 h1, h2
-  font-size: 32px
-  line-height: 40px
+  font-size: 50px
+  line-height: 60px
   color: $red
   text-align: center
 h2
-  color: $main
-.main 
+  font-size: 32px
+  line-height: 40px
+  color: $red
+  margin-bottom: 2em
+
   
 .text, .header
   top: 50%
-  transform: translateY(-50%)
-  position: relative
+  left: 50%
+  transform: translateY(-50%) translateX(-50%)
+  position: fixed
   transition: all 1.5s
   padding: 0 2em
   width: 100%
@@ -36,6 +42,8 @@ h2
   z-index: 1
 .text
   opacity: 0
+  max-height: calc(100vh - 100px)
+  overflow: auto
 .header.go
   opacity: 0
 .text.go
@@ -49,11 +57,13 @@ h2
   margin-bottom: 6rem
 a, a:link, a:visited
   color: inherit
+  margin-top: 5em
+  display: block
 
 p
   color: $main
-  font-size: 14px
-  line-height: 19px
+  font-size: 16px
+  line-height: 22px
   margin-bottom: 1em
   text-align: center
   &:last-child
